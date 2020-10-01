@@ -1,0 +1,17 @@
+/* ********************************** ICON ********************************** */
+.icon {
+  svg {
+    display: none;
+  }
+  @media #{$break-s} {
+    position: relative;
+    svg {
+      display: initial;
+      position: absolute;
+      right: 30px;
+      bottom: 22px;
+      fill: grey;
+      opacity: 0.6;
+    }
+  }
+}

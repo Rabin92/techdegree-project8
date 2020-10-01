@@ -7,13 +7,18 @@ header {
 
 .flex-container {
   @include flexy($f-dir: column);
-  & input {
+  input {
     margin-top: 10px;
-    padding: 8px;
+    padding: 9px;
+    border-radius: 5px;
+    border: 1px solid grey;
   }
-  @media #{$break-l} {
+  @media #{$break-s} {
     @include flexy($dsp: null, $f-dir: row, $j-content: space-between);
-    & input {
+    h2 {
+      align-self: center;
+    }
+    input {
       margin-top: initial;
       width: 40%;
     }

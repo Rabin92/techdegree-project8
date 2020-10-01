@@ -1,0 +1,12 @@
+/* **************************** EMPLOYEE SECTION **************************** */
+.employee-dir {
+  @include flexy();
+  margin-bottom: 20px;
+  border-radius: 10px;
+  border: 2px solid lime;
+  padding: 0.8em;
+}
+
+.employee-info {
+  margin-left: 10px;
+}

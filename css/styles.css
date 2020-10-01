@@ -394,12 +394,17 @@ header {
 }
 .flex-container input {
   margin-top: 10px;
-  padding: 8px;
+  padding: 9px;
+  border-radius: 5px;
+  border: 1px solid grey;
 }
-@media (min-width: 82em) {
+@media (min-width: 43em) {
   .flex-container {
     flex-direction: row;
     justify-content: space-between;
+  }
+  .flex-container h2 {
+    align-self: center;
   }
   .flex-container input {
     margin-top: initial;
@@ -407,10 +412,42 @@ header {
   }
 }
 
+/* ********************************** ICON ********************************** */
+.icon svg {
+  display: none;
+}
+@media (min-width: 43em) {
+  .icon {
+    position: relative;
+  }
+  .icon svg {
+    display: initial;
+    position: absolute;
+    right: 30px;
+    bottom: 22px;
+    fill: grey;
+    opacity: 0.6;
+  }
+}
+
 /* ********************************** MAIN ********************************** */
 .grid-container {
   display: grid;
   border: 2px solid greenyellow;
+  padding: 1em;
+}
+
+/* **************************** EMPLOYEE SECTION **************************** */
+.employee-dir {
+  display: flex;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  border: 2px solid lime;
+  padding: 0.8em;
+}
+
+.employee-info {
+  margin-left: 10px;
 }
 
 /* ****************************** IMAGE STYLES ****************************** */
@@ -420,5 +457,11 @@ header {
 }
 
 /* ********************************* FOOTER ********************************* */
+footer {
+  padding: 1em;
+  text-align: center;
+  background: red;
+  color: #fff;
+}
 
 /*# sourceMappingURL=styles.css.map */
