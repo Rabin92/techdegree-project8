@@ -2,11 +2,9 @@
 
 .wrapper {
   border: 1px solid red;
-  margin: 0 auto;
   background: green;
-  height: 100vh;
-}
-
-header {
-  background: red;
+  @media #{$break-l} {
+    width: 90%;
+    margin: 0 auto;
+  }
 }
