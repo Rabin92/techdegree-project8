@@ -1,17 +1,16 @@
 /* ********************************** ICON ********************************** */
 .icon {
+  position: relative;
   svg {
-    display: none;
+    display: initial;
+    position: absolute;
+    right: 30px;
+    bottom: 22px;
+    fill: grey;
+    opacity: 0.6;
   }
-  @media #{$break-s} {
-    position: relative;
-    svg {
-      display: initial;
-      position: absolute;
-      right: 30px;
-      bottom: 22px;
-      fill: grey;
-      opacity: 0.6;
-    }
+  &-arrow {
+    @include flexy($j-content: space-evenly);
+    margin-bottom: 15px;
   }
 }

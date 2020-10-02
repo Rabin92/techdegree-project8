@@ -1,8 +1,12 @@
 /* ******************************* BASE STYLES ****************************** */
+body {
+  position: relative;
+  font-family: "Heebo", sans-serif;
+  font-weight: 300;
+}
 
 .wrapper {
-  border: 1px solid red;
-  background: green;
+  background: #fbfbfd;
   @media #{$break-l} {
     width: 90%;
     margin: 0 auto;

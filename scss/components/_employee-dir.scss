@@ -1,12 +1,11 @@
 /* **************************** EMPLOYEE SECTION **************************** */
 .employee-dir {
-  @include flexy();
+  @include flexy($j-content: center);
   margin-bottom: 20px;
   border-radius: 10px;
-  border: 2px solid lime;
+  background: lightgrey;
   padding: 0.8em;
-}
-
-.employee-info {
-  margin-left: 10px;
+  @media #{$break-s} {
+    @include flexy($j-content: initial);
+  }
 }

@@ -1,26 +1,17 @@
 /* ********************************* HEADER ********************************* */
 header {
-  background: yellow;
-  border: 2px solid purple;
+  background: #005246;
   padding: 1em;
+  border-bottom: 2px outset #4b4453;
 }
 
 .flex-container {
   @include flexy($f-dir: column);
-  input {
-    margin-top: 10px;
-    padding: 9px;
-    border-radius: 5px;
-    border: 1px solid grey;
-  }
-  @media #{$break-s} {
-    @include flexy($dsp: null, $f-dir: row, $j-content: space-between);
-    h2 {
-      align-self: center;
-    }
-    input {
-      margin-top: initial;
-      width: 40%;
-    }
+  h2 {
+    color: #fff;
+    font-weight: 500;
+    letter-spacing: 0.15em;
+    align-self: center;
+    margin-bottom: 10px;
   }
 }

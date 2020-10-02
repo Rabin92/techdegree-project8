@@ -370,14 +370,9 @@ button {
 }
 
 /* ******************************* BASE STYLES ****************************** */
-body {
-  position: relative;
-  font-family: "Heebo", sans-serif;
-  font-weight: 300;
-}
-
 .wrapper {
-  background: #fbfbfd;
+  border: 1px solid red;
+  background: green;
 }
 @media (min-width: 82em) {
   .wrapper {
@@ -388,147 +383,85 @@ body {
 
 /* ********************************* HEADER ********************************* */
 header {
-  background: #005246;
+  background: yellow;
+  border: 2px solid purple;
   padding: 1em;
-  border-bottom: 2px outset #4b4453;
 }
 
 .flex-container {
   display: flex;
   flex-direction: column;
 }
-.flex-container h2 {
-  color: #fff;
-  font-weight: 500;
-  letter-spacing: 0.15em;
-  align-self: center;
-  margin-bottom: 10px;
-}
-
-/* ********************************** INPUT ********************************* */
-input[type=text] {
-  letter-spacing: 0.15em;
+.flex-container input {
   margin-top: 10px;
   padding: 9px;
   border-radius: 5px;
   border: 1px solid grey;
 }
+@media (min-width: 43em) {
+  .flex-container {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .flex-container h2 {
+    align-self: center;
+  }
+  .flex-container input {
+    margin-top: initial;
+    width: 40%;
+  }
+}
 
 /* ********************************** ICON ********************************** */
-.icon {
-  position: relative;
-}
 .icon svg {
-  display: initial;
-  position: absolute;
-  right: 30px;
-  bottom: 22px;
-  fill: grey;
-  opacity: 0.6;
+  display: none;
 }
-.icon-arrow {
-  display: flex;
-  justify-content: space-evenly;
-  margin-bottom: 15px;
+@media (min-width: 43em) {
+  .icon {
+    position: relative;
+  }
+  .icon svg {
+    display: initial;
+    position: absolute;
+    right: 30px;
+    bottom: 22px;
+    fill: grey;
+    opacity: 0.6;
+  }
 }
 
 /* ********************************** MAIN ********************************** */
 .grid-container {
   display: grid;
+  border: 2px solid greenyellow;
   padding: 1em;
-}
-@media (min-width: 43em) {
-  .grid-container {
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    grid-auto-rows: 150px;
-    grid-gap: 5px 25px;
-    min-height: 100vh;
-  }
 }
 
 /* **************************** EMPLOYEE SECTION **************************** */
 .employee-dir {
   display: flex;
-  justify-content: center;
   margin-bottom: 20px;
   border-radius: 10px;
-  background: lightgrey;
+  border: 2px solid lime;
   padding: 0.8em;
 }
-@media (min-width: 43em) {
-  .employee-dir {
-    display: flex;
-    justify-content: initial;
-  }
-}
 
-/* ****************************** EMPLOYEE INFO ***************************** */
 .employee-info {
-  align-self: center;
-  margin-left: 20px;
+  margin-left: 10px;
 }
 
 /* ****************************** IMAGE STYLES ****************************** */
 .avatar {
   border-radius: 50%;
-  height: 90px;
-  border: 2px inset grey;
-}
-
-.avatar-modal {
-  align-self: center;
-}
-
-/* ********************************* OVERLAY ******************************** */
-.overlay {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background: rgba(146, 142, 142, 0.6);
-}
-
-/* ********************************** MODAL ********************************* */
-.modal {
-  display: flex;
-  flex-direction: column;
-  position: relative;
-  margin: 15% auto;
-  width: 300px;
-  border-radius: 30px;
-  text-align: center;
-  background: #f2f2f2;
-}
-.modal-employee-info {
-  padding: 1.4em;
-}
-
-/* ******************************* MODAL CLOSE ****************************** */
-.modal-close {
-  position: absolute;
-  font-size: 1.3em;
-  top: 15px;
-  right: 15px;
-  background: none;
-}
-
-/* ********************************* CURSOR ********************************* */
-.grid-container,
-.modal-close,
-.arrow {
-  cursor: pointer;
-}
-
-/* ***************************** HORIZONTAL LINE **************************** */
-.hr-line {
-  width: 70%;
+  height: 60px;
 }
 
 /* ********************************* FOOTER ********************************* */
 footer {
-  padding: 0.8em;
+  padding: 1em;
   text-align: center;
+  background: red;
+  color: #fff;
 }
 
 /*# sourceMappingURL=styles.css.map */

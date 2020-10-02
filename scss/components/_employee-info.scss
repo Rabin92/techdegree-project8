@@ -1,0 +1,5 @@
+/* ****************************** EMPLOYEE INFO ***************************** */
+.employee-info {
+  @include flexy($dsp: null, $a-self: center);
+  margin-left: 20px;
+}

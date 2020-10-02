@@ -1,5 +1,6 @@
-@mixin flexy($dsp: flex, $f-dir: null, $j-content: null) {
+@mixin flexy($dsp: flex, $f-dir: null, $j-content: null, $a-self: null) {
   display: $dsp;
   flex-direction: $f-dir;
   justify-content: $j-content;
+  align-self: $a-self;
 }

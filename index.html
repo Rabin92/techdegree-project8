@@ -3,6 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Google fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;500&display=swap"
+      rel="stylesheet"
+    />
+    <!-- External Stylesheet -->
     <link rel="stylesheet" href="css/styles.css" />
     <title>Employee Directory</title>
   </head>
@@ -16,6 +22,7 @@
 
       <div class="icon">
         <svg
+          class="icon-search"
           xmlns="http://www.w3.org/2000/svg"
           height="30"
           viewBox="0 0 512 512"
@@ -148,11 +155,60 @@
           </div>
         </div>
       </main>
-
-      <footer>
-        <p><strong>&copy; Copyright 2020.</strong></p>
-      </footer>
       <!-- main closed -->
+
+      <div class="overlay hidden">
+        <div class="modal">
+          <button class="modal-close" id="js-modal-close">&#10005;</button>
+          ​<!-- modal information will be added with JS here -->
+          <img
+            src="employee-1.jpg"
+            alt="employee-1"
+            class="avatar avatar-modal"
+          />
+          <div class="employee-info modal-employee-info">
+            <h2>Sarah Williams</h2>
+            <p>sarah_williams01.com</p>
+            <p>Chicago</p>
+            <hr />
+            <p>(593) 364-3249​</p>
+            <p>123 Anywhere St, WV 84814</p>
+            <p>Birthday: 01/04/85</p>
+          </div>
+          <div class="icon-arrow">
+            <svg
+              class="arrow"
+              xmlns="http://www.w3.org/2000/svg"
+              height="30"
+              viewBox="0 0 512 512"
+            >
+              <path
+                d="M256,48C141.13,48,48,141.13,48,256s93.13,208,208,208,208-93.13,208-208S370.87,48,256,48Zm62.63,304L296,374.63,177.37,256,296,137.37,318.63,160l-96,96Z"
+              />
+            </svg>
+            <!-- left arrow -->
+
+            <svg
+              class="arrow"
+              xmlns="http://www.w3.org/2000/svg"
+              height="30"
+              viewBox="0 0 512 512"
+            >
+              <path
+                d="M256,48C141.13,48,48,141.13,48,256s93.13,208,208,208,208-93.13,208-208S370.87,48,256,48ZM216,374.63,193.37,352l96-96-96-96L216,137.37,334.63,256Z"
+              />
+            </svg>
+            <!-- right arrow -->
+          </div>
+        </div>
+      </div>
+
+      <hr class="hr-line" />
+      <footer>
+        <p>
+          <strong>Copyright &copy; 2020. All rights reserved.</strong>
+        </p>
+      </footer>
     </div>
     <!-- div: wrapper closed -->
   </body>

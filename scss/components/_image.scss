@@ -1,5 +1,10 @@
 /* ****************************** IMAGE STYLES ****************************** */
 .avatar {
   border-radius: 50%;
-  height: 60px;
+  height: 90px;
+  border: 2px inset grey;
+}
+
+.avatar-modal {
+  align-self: center;
 }
