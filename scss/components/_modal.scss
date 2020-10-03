@@ -1,13 +1,11 @@
 /* ********************************** MODAL ********************************* */
 .modal {
   @include flexy($f-dir: column);
-  position: relative;
+  position: sticky;
+  top: 0%;
   margin: 15% auto;
   width: 300px;
   border-radius: 30px;
   text-align: center;
   background: #f2f2f2;
-  &-employee-info {
-    padding: 1.4em;
-  }
 }

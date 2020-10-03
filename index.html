@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- Google fonts -->
     <link
-      href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;500&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;800&display=swap"
       rel="stylesheet"
     />
     <!-- External Stylesheet -->
@@ -35,125 +35,7 @@
       <!-- div: icon closed -->
 
       <main class="grid-container">
-        <div class="employee-dir">
-          <img src="employee-1.jpg" alt="employee-1" class="avatar" />
-
-          <div class="employee-info">
-            <h2>Sarah Williams</h2>
-            <p>sarah_williams01.com</p>
-            <p>Chicago</p>
-          </div>
-        </div>
-
-        <div class="employee-dir">
-          <img src="employee-1.jpg" alt="employee-1" class="avatar" />
-
-          <div class="employee-info">
-            <h2>Sarah Williams</h2>
-            <p>sarah_williams01.com</p>
-            <p>Chicago</p>
-          </div>
-        </div>
-
-        <div class="employee-dir">
-          <img src="employee-1.jpg" alt="employee-1" class="avatar" />
-
-          <div class="employee-info">
-            <h2>Sarah Williams</h2>
-            <p>sarah_williams01.com</p>
-            <p>Chicago</p>
-          </div>
-        </div>
-
-        <div class="employee-dir">
-          <img src="employee-1.jpg" alt="employee-1" class="avatar" />
-
-          <div class="employee-info">
-            <h2>Sarah Williams</h2>
-            <p>sarah_williams01.com</p>
-            <p>Chicago</p>
-          </div>
-        </div>
-
-        <div class="employee-dir">
-          <img src="employee-1.jpg" alt="employee-1" class="avatar" />
-
-          <div class="employee-info">
-            <h2>Sarah Williams</h2>
-            <p>sarah_williams01.com</p>
-            <p>Chicago</p>
-          </div>
-        </div>
-
-        <div class="employee-dir">
-          <img src="employee-1.jpg" alt="employee-1" class="avatar" />
-
-          <div class="employee-info">
-            <h2>Sarah Williams</h2>
-            <p>sarah_williams01.com</p>
-            <p>Chicago</p>
-          </div>
-        </div>
-
-        <div class="employee-dir">
-          <img src="employee-1.jpg" alt="employee-1" class="avatar" />
-
-          <div class="employee-info">
-            <h2>Sarah Williams</h2>
-            <p>sarah_williams01.com</p>
-            <p>Chicago</p>
-          </div>
-        </div>
-
-        <div class="employee-dir">
-          <img src="employee-1.jpg" alt="employee-1" class="avatar" />
-
-          <div class="employee-info">
-            <h2>Sarah Williams</h2>
-            <p>sarah_williams01.com</p>
-            <p>Chicago</p>
-          </div>
-        </div>
-
-        <div class="employee-dir">
-          <img src="employee-1.jpg" alt="employee-1" class="avatar" />
-
-          <div class="employee-info">
-            <h2>Sarah Williams</h2>
-            <p>sarah_williams01.com</p>
-            <p>Chicago</p>
-          </div>
-        </div>
-
-        <div class="employee-dir">
-          <img src="employee-1.jpg" alt="employee-1" class="avatar" />
-
-          <div class="employee-info">
-            <h2>Sarah Williams</h2>
-            <p>sarah_williams01.com</p>
-            <p>Chicago</p>
-          </div>
-        </div>
-
-        <div class="employee-dir">
-          <img src="employee-1.jpg" alt="employee-1" class="avatar" />
-
-          <div class="employee-info">
-            <h2>Sarah Williams</h2>
-            <p>sarah_williams01.com</p>
-            <p>Chicago</p>
-          </div>
-        </div>
-
-        <div class="employee-dir">
-          <img src="employee-1.jpg" alt="employee-1" class="avatar" />
-
-          <div class="employee-info">
-            <h2>Sarah Williams</h2>
-            <p>sarah_williams01.com</p>
-            <p>Chicago</p>
-          </div>
-        </div>
+        <!-- Insert Employee Details from JS -->
       </main>
       <!-- main closed -->
 
@@ -161,23 +43,11 @@
         <div class="modal">
           <button class="modal-close" id="js-modal-close">&#10005;</button>
           ​<!-- modal information will be added with JS here -->
-          <img
-            src="employee-1.jpg"
-            alt="employee-1"
-            class="avatar avatar-modal"
-          />
-          <div class="employee-info modal-employee-info">
-            <h2>Sarah Williams</h2>
-            <p>sarah_williams01.com</p>
-            <p>Chicago</p>
-            <hr />
-            <p>(593) 364-3249​</p>
-            <p>123 Anywhere St, WV 84814</p>
-            <p>Birthday: 01/04/85</p>
-          </div>
+          <div class="modal-content"></div>
+
           <div class="icon-arrow">
             <svg
-              class="arrow"
+              id="js-left-arrow"
               xmlns="http://www.w3.org/2000/svg"
               height="30"
               viewBox="0 0 512 512"
@@ -189,7 +59,7 @@
             <!-- left arrow -->
 
             <svg
-              class="arrow"
+              id="js-right-arrow"
               xmlns="http://www.w3.org/2000/svg"
               height="30"
               viewBox="0 0 512 512"
@@ -200,10 +70,14 @@
             </svg>
             <!-- right arrow -->
           </div>
+          <!-- div: icon arrow closed -->
         </div>
+        <!-- div: modal closed -->
       </div>
+      <!-- div: Overlay closed -->
 
       <hr class="hr-line" />
+      <!-- HR line -->
       <footer>
         <p>
           <strong>Copyright &copy; 2020. All rights reserved.</strong>
@@ -211,5 +85,6 @@
       </footer>
     </div>
     <!-- div: wrapper closed -->
+    <script src="js/script.js"></script>
   </body>
 </html>

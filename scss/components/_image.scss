@@ -3,6 +3,10 @@
   border-radius: 50%;
   height: 90px;
   border: 2px inset grey;
+  transition: transform 0.2s linear;
+  &:hover {
+    transform: translateY(8px);
+  }
 }
 
 .avatar-modal {

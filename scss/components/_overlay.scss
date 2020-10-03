@@ -6,8 +6,9 @@
   bottom: 0;
   left: 0;
   background: rgba(146, 142, 142, 0.6);
+  filter: grayscale(30%);
 }
 
 .hidden {
-  //   display: none;
+  display: none;
 }

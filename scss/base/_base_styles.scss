@@ -1,4 +1,8 @@
 /* ******************************* BASE STYLES ****************************** */
+* {
+  box-sizing: border-box;
+}
+
 body {
   position: relative;
   font-family: "Heebo", sans-serif;
@@ -8,7 +12,7 @@ body {
 .wrapper {
   background: #fbfbfd;
   @media #{$break-l} {
-    width: 90%;
+    width: 85%;
     margin: 0 auto;
   }
 }

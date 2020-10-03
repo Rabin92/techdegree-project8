@@ -5,12 +5,12 @@
     display: initial;
     position: absolute;
     right: 30px;
-    bottom: 22px;
+    bottom: 50px;
     fill: grey;
     opacity: 0.6;
   }
   &-arrow {
-    @include flexy($j-content: space-evenly);
-    margin-bottom: 15px;
+    @include flexy($j-content: space-around);
+    margin: 22px 0;
   }
 }
