@@ -65,6 +65,7 @@ const displayModal = (index) => {
     location: { city, street, state, postcode },
     picture,
   } = employees[index];
+
   let date = new Date(dob.date);
 
   const modalHTML = `
@@ -90,6 +91,27 @@ const displayOverlay = (e) => {
     const card = theTarget.closest(".employee-dir");
     const index = card.getAttribute("data-index");
     displayModal(index);
+
+    // Left and Right Arrows on Modal
+    let counterIndex = index;
+    rightArrow.addEventListener("click", () => {
+      if (counterIndex !== 11) {
+        counterIndex++;
+        displayModal(counterIndex);
+      } else if (counterIndex === 11) {
+        rightArrow.classList.add("js-hide-arrow-right");
+      }
+    });
+
+    leftArrow.addEventListener("click", () => {
+      if (counterIndex !== 0) {
+        counterIndex--;
+        displayModal(counterIndex);
+      } else if (counterIndex === 0) {
+        rightArrow.classList.remove("js-hide-arrow-right");
+      }
+    });
+
     // Blur the main content
     container.style.filter = "blur(3px)";
   }
@@ -112,5 +134,3 @@ fetch(url)
 // Event listener
 container.addEventListener("click", displayOverlay);
 modalClose.addEventListener("click", closeModal);
-
-rightArrow.addEventListener("click", () => {});
