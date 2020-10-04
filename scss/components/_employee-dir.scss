@@ -3,11 +3,16 @@
   @include flexy($j-content: center);
   margin-bottom: 20px;
   border-radius: 10px;
-  background: lightgrey;
+  background: $employee-dir-bk;
+  box-shadow: 1px 1px #888888;
   padding: 0.8em;
   overflow: hidden;
   @media #{$break-s} {
     @include flexy($j-content: initial);
     overflow: initial;
   }
+}
+
+.employee-card {
+  display: none;
 }
