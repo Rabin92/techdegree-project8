@@ -94,7 +94,8 @@ const displayOverlay = (e) => {
       if (counterIndex !== 11) {
         counterIndex++;
         displayModal(counterIndex);
-      } else if (counterIndex === 11) {
+      }
+      if (counterIndex === 11) {
         rightArrow.classList.add("js-hide-arrow-right");
       }
     });
@@ -103,13 +104,14 @@ const displayOverlay = (e) => {
       if (counterIndex !== 0) {
         counterIndex--;
         displayModal(counterIndex);
-      } else if (counterIndex === 8) {
+      }
+      if (counterIndex == 10) {
         rightArrow.classList.remove("js-hide-arrow-right");
       }
     });
 
     // Add blur effect on the main content
-    container.style.filter = "blur(3px)";
+    container.style.filter = "blur(4px)";
   }
 };
 
@@ -120,17 +122,38 @@ const closeModal = () => {
   container.style.filter = "none";
 };
 
+// Function: Error message
+
+const errMsg = () => {
+  const error = document.querySelector(".error-msg");
+
+  const displayMsg = `
+  <svg
+  class="icon-alert"
+  xmlns="http://www.w3.org/2000/svg"
+  height="40"
+  viewBox="0 0 512 512"
+>
+  <path
+    d="M256,48C141.31,48,48,141.31,48,256s93.31,208,208,208,208-93.31,208-208S370.69,48,256,48Zm0,319.91a20,20,0,1,1,20-20A20,20,0,0,1,256,367.91Zm21.72-201.15-5.74,122a16,16,0,0,1-32,0l-5.74-121.94v-.05a21.74,21.74,0,1,1,43.44,0Z"
+  />
+</svg>
+    <p>An error has occurred. Please try again!</p>
+    `;
+  error.innerHTML = displayMsg;
+};
+
 // Function: Search
 const searchEmployee = () => {
   const searchVal = search.value.toUpperCase();
   const displayEmployeesName = employees;
   const employeeCard = document.getElementsByClassName("employee-dir");
-  console.log(employeeCard);
 
   for (let i = 0; i < displayEmployeesName.length; i++) {
     const matchedNames = `
     ${displayEmployeesName[i].name.first.toUpperCase()} 
-    ${displayEmployeesName[i].name.last.toUpperCase()}`;
+    ${displayEmployeesName[i].name.last.toUpperCase()}
+    `;
 
     if (matchedNames.includes(searchVal)) {
       employeeCard[i].classList.remove("employee-card");
@@ -145,7 +168,9 @@ fetch(url)
   .then((res) => res.json())
   .then((data) => data.results)
   .then(displayEmployees)
-  .catch((err) => console.log(err));
+  .catch(errMsg);
+
+// .catch((err) => console.log(err));
 
 // Event listener
 container.addEventListener("click", displayOverlay);
