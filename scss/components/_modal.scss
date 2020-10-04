@@ -2,10 +2,10 @@
 .modal {
   @include flexy($f-dir: column);
   position: sticky;
-  top: 0%;
+  top: 30%;
   margin: 15% auto;
   width: 300px;
   border-radius: 30px;
   text-align: center;
-  background: #f2f2f2;
+  background: $modal-bck;
 }
