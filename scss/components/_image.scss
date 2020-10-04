@@ -2,7 +2,7 @@
 .avatar {
   border-radius: 50%;
   height: 90px;
-  border: 2px inset grey;
+  border: 2px inset $avatar-brdr;
   transition: transform 0.2s linear;
   &:hover {
     transform: translateY(8px);
@@ -10,5 +10,5 @@
 }
 
 .avatar-modal {
-  align-self: center;
+  @include flexy($dsp: null, $a-self: center);
 }
