@@ -4,6 +4,9 @@
     @include flexy($j-content: space-around);
     margin: 22px 0;
   }
+  &-alert {
+    fill: red;
+  }
 }
 
 .js-hide-arrow-right {
