@@ -7,10 +7,11 @@ body {
   position: relative;
   font-family: "Heebo", sans-serif;
   font-weight: 300;
+  background: $body-bck;
 }
 
 .wrapper {
-  background: #fbfbfd;
+  background: $wrapper-bck;
   @media #{$break-l} {
     width: 85%;
     margin: 0 auto;
