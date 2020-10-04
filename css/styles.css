@@ -437,7 +437,8 @@ input[type=text] {
   fill: red;
 }
 
-.js-hide-arrow-right {
+.js-hide-arrow-right,
+.js-hide-arrow-left {
   display: none;
 }
 
