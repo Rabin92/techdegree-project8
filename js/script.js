@@ -35,10 +35,6 @@ const displayEmployees = (employeeData) => {
       location: { city },
       picture,
     } = employee;
-    // let name = employee.name;
-    // let email = employee.email;
-    // let city = employee.location.city;
-    // let picture = employee.picture;
 
     employeeHTML += `
         <div class="employee-dir" data-index="${index}">
@@ -107,12 +103,12 @@ const displayOverlay = (e) => {
       if (counterIndex !== 0) {
         counterIndex--;
         displayModal(counterIndex);
-      } else if (counterIndex === 0) {
+      } else if (counterIndex === 8) {
         rightArrow.classList.remove("js-hide-arrow-right");
       }
     });
 
-    // Blur the main content
+    // Add blur effect on the main content
     container.style.filter = "blur(3px)";
   }
 };
@@ -120,8 +116,28 @@ const displayOverlay = (e) => {
 // Function: Close Modal
 const closeModal = () => {
   overlay.classList.add("hidden");
-  // Remove blur
+  // Remove blur effect
   container.style.filter = "none";
+};
+
+// Function: Search
+const searchEmployee = () => {
+  const searchVal = search.value.toUpperCase();
+  const displayEmployeesName = employees;
+  const employeeCard = document.getElementsByClassName("employee-dir");
+  console.log(employeeCard);
+
+  for (let i = 0; i < displayEmployeesName.length; i++) {
+    const matchedNames = `
+    ${displayEmployeesName[i].name.first.toUpperCase()} 
+    ${displayEmployeesName[i].name.last.toUpperCase()}`;
+
+    if (matchedNames.includes(searchVal)) {
+      employeeCard[i].classList.remove("employee-card");
+    } else {
+      employeeCard[i].classList.add("employee-card");
+    }
+  }
 };
 
 // Fetch API data
@@ -134,3 +150,4 @@ fetch(url)
 // Event listener
 container.addEventListener("click", displayOverlay);
 modalClose.addEventListener("click", closeModal);
+search.addEventListener("keyup", searchEmployee);
