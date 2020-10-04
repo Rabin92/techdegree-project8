@@ -1,0 +1,11 @@
+/* ********************************** ERROR ********************************* */
+.error-msg {
+  @include flexy($a-items: center, $j-content: center);
+  border: 1px solid red;
+  padding: 1em;
+  grid-column: 1 /4;
+  p {
+    margin-left: 10px;
+    font-weight: bold;
+  }
+}
