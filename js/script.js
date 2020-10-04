@@ -170,8 +170,6 @@ fetch(url)
   .then(displayEmployees)
   .catch(errMsg);
 
-// .catch((err) => console.log(err));
-
 // Event listener
 container.addEventListener("click", displayOverlay);
 modalClose.addEventListener("click", closeModal);
