@@ -396,7 +396,6 @@ header {
   background: #005246;
   padding: 1em;
   margin-bottom: 30px;
-  z-index: 999;
 }
 @media (min-width: 62em) {
   header {
@@ -434,6 +433,9 @@ input[type=text] {
   justify-content: space-around;
   margin: 22px 0;
 }
+.icon-alert {
+  fill: red;
+}
 
 .js-hide-arrow-right {
   display: none;
@@ -441,15 +443,15 @@ input[type=text] {
 
 /* ********************************** MAIN ********************************** */
 .grid-container {
-  display: grid;
   padding: 1em;
+  min-height: 100vh;
 }
 @media (min-width: 43em) {
   .grid-container {
+    display: grid;
     grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
     grid-auto-rows: 150px;
     grid-gap: 5px 25px;
-    min-height: 100vh;
   }
 }
 
@@ -551,6 +553,20 @@ input[type=text] {
   top: 15px;
   right: 15px;
   background: none;
+}
+
+/* ********************************** ERROR ********************************* */
+.error-msg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid red;
+  padding: 1em;
+  grid-column: 1/4;
+}
+.error-msg p {
+  margin-left: 10px;
+  font-weight: bold;
 }
 
 /* ********************************* CURSOR ********************************* */
