@@ -97,6 +97,8 @@ const displayOverlay = (e) => {
       }
       if (counterIndex === 11) {
         rightArrow.classList.add("js-hide-arrow-right");
+      } else if (counterIndex === 1) {
+        leftArrow.classList.remove("js-hide-arrow-left");
       }
     });
 
@@ -107,7 +109,10 @@ const displayOverlay = (e) => {
       }
       if (counterIndex == 10) {
         rightArrow.classList.remove("js-hide-arrow-right");
+      } else if (counterIndex === 0) {
+        leftArrow.classList.add("js-hide-arrow-left");
       }
+      console.log(counterIndex);
     });
 
     // Add blur effect on the main content
