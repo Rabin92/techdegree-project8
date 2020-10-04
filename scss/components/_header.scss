@@ -1,17 +1,24 @@
 /* ********************************* HEADER ********************************* */
 header {
-  background: #005246;
+  background: $header-col;
   padding: 1em;
   margin-bottom: 30px;
+  // position: sticky;
+  // top: $offset-position-val;
+  z-index: 999;
+  @media #{$break-m} {
+    border-bottom-left-radius: 1em 1em;
+    border-bottom-right-radius: 1em 1em;
+  }
 }
 
 .flex-container {
   @include flexy($f-dir: column);
   h2 {
-    color: #fff;
+    @include flexy($dsp: null, $a-self: center);
+    color: $white;
     font-weight: 800;
     letter-spacing: 0.15em;
-    align-self: center;
     margin-bottom: 10px;
   }
 }
