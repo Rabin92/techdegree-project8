@@ -112,7 +112,6 @@ const displayOverlay = (e) => {
       } else if (counterIndex === 0) {
         leftArrow.classList.add("js-hide-arrow-left");
       }
-      console.log(counterIndex);
     });
 
     // Add blur effect on the main content
