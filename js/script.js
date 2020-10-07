@@ -21,7 +21,7 @@ let employees = [];
 const url = `https://randomuser.me/api/?results=12&inc=name, picture, email, location, phone, dob &noinfo &nat=GB`;
 
 // Function: Display Employees Data
-const displayEmployees = (employeeData) => {
+const displayEmployees = employeeData => {
   employees = employeeData;
 
   // Store employee data
@@ -52,7 +52,7 @@ const displayEmployees = (employeeData) => {
 };
 
 // Function: Display Modal
-const displayModal = (index) => {
+const displayModal = index => {
   let {
     name,
     dob,
@@ -81,7 +81,7 @@ const displayModal = (index) => {
 };
 
 // Function: Open modal when its selected
-const displayOverlay = (e) => {
+const displayOverlay = e => {
   const theTarget = e.target;
   if (theTarget !== container) {
     const card = theTarget.closest(".employee-dir");
@@ -169,8 +169,8 @@ const searchEmployee = () => {
 
 // Fetch API data
 fetch(url)
-  .then((res) => res.json())
-  .then((data) => data.results)
+  .then(res => res.json())
+  .then(data => data.results)
   .then(displayEmployees)
   .catch(errMsg);
 
