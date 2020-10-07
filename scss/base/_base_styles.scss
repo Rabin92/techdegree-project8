@@ -14,6 +14,7 @@ body {
   background: $wrapper-bck;
   @media #{$break-l} {
     width: 85%;
+    max-width: 1160px;
     margin: 0 auto;
   }
 }
