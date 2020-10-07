@@ -387,6 +387,7 @@ body {
 @media (min-width: 82em) {
   .wrapper {
     width: 85%;
+    max-width: 1160px;
     margin: 0 auto;
   }
 }
