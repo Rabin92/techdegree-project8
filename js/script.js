@@ -151,12 +151,13 @@ const errMsg = () => {
 const searchEmployee = () => {
   const searchVal = search.value.toUpperCase();
   const displayEmployeesName = employees;
-  const employeeCard = document.getElementsByClassName("employee-dir");
+  const employeeCard = document.querySelectorAll(".employee-dir");
 
-  for (let i = 0; i < displayEmployeesName.length; i++) {
+  displayEmployeesName.forEach((employee, i) => {
     const matchedNames = `
-    ${displayEmployeesName[i].name.first.toUpperCase()} 
-    ${displayEmployeesName[i].name.last.toUpperCase()}
+    ${
+      employee.name.first.toUpperCase() + " " + employee.name.last.toUpperCase()
+    } 
     `;
 
     if (matchedNames.includes(searchVal)) {
@@ -164,7 +165,7 @@ const searchEmployee = () => {
     } else {
       employeeCard[i].classList.add("employee-card");
     }
-  }
+  });
 };
 
 // Fetch API data
