@@ -11,6 +11,13 @@ const searchIcon = document.querySelector(".icon-search");
 // Footer
 const footer = document.querySelector("footer");
 
+// Background color
+const setBGColor = (element, color) => (element.style.backgroundColor = color);
+// color
+const setColor = (element, color) => (element.style.color = color);
+// SVG Fill
+const svgFill = (element, color) => (element.style.fill = color);
+
 // Color
 const black = "#000";
 const codGray = "#111";
@@ -22,53 +29,54 @@ const checkedBtn = e => {
   const employeeDir = document.querySelectorAll(".employee-dir");
 
   if (theTarget.checked) {
-    body.style.backgroundColor = codGray;
-    header.style.backgroundColor = black;
-    wrap.style.backgroundColor = black;
-
-    modal.style.backgroundColor = codGray;
-    modal.style.color = white;
-    modal.style.border = "2px solid #fff";
-    modalClose.style.color = white;
-
-    search.style.backgroundColor = codGray;
+    // Background Color
+    setBGColor(body, codGray);
+    setBGColor(header, black);
+    setBGColor(wrap, black);
+    setBGColor(modal, codGray);
+    setBGColor(search, codGray);
+    // Color
+    setColor(modal, white);
+    setColor(modalClose, white);
+    setColor(footer, white);
+    // Border Style
     search.style.border = "1px solid white";
-
-    leftArrow.style.fill = white;
-    rightArrow.style.fill = white;
-
-    searchIcon.style.fill = white;
-
-    footer.style.color = white;
+    // SVG Fill
+    svgFill(leftArrow, white);
+    svgFill(rightArrow, white);
+    svgFill(searchIcon, white);
 
     employeeDir.forEach(employee => {
-      employee.style.backgroundColor = codGray;
-      employee.style.color = white;
+      // Background Color
+      setBGColor(employee, codGray);
+      // Color
+      setColor(employee, white);
+      // Border Style
       employee.style.border = "1px solid #fff";
     });
   } else {
-    body.style.backgroundColor = "";
-    header.style.backgroundColor = "";
-    wrap.style.backgroundColor = "";
-
-    modal.style.backgroundColor = "";
-    modal.style.color = "";
-    modal.style.border = "";
-    modalClose.style.color = "";
-
-    search.style.backgroundColor = "";
+    // Background Color
+    setBGColor(body, "");
+    setBGColor(header, "");
+    setBGColor(wrap, "");
+    setBGColor(modal, "");
+    setBGColor(search, "");
+    // Color
+    setColor(modal, "");
+    setColor(modalClose, "");
+    setColor(footer, "");
+    // Border Style
     search.style.border = "";
-
-    leftArrow.style.fill = "";
-    rightArrow.style.fill = "";
-
-    searchIcon.style.fill = "";
-
-    footer.style.color = "";
+    // SVG Fill
+    svgFill(leftArrow, "");
+    svgFill(rightArrow, "");
+    svgFill(searchIcon, "");
 
     employeeDir.forEach(employee => {
-      employee.style.backgroundColor = "";
-      employee.style.color = "";
+      // Background Color
+      setBGColor(employee, "");
+      // Color
+      setColor(employee, "");
     });
   }
 };
