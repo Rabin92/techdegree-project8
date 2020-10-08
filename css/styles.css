@@ -394,6 +394,7 @@ body {
 
 /* ********************************* HEADER ********************************* */
 header {
+  position: relative;
   background: #005246;
   padding: 1em;
   margin-bottom: 30px;
@@ -424,8 +425,6 @@ input[type=text] {
   padding: 9px;
   border-radius: 5px;
   border: 1px solid grey;
-  background: #fff url("../icons/search.svg") no-repeat 98% 50%;
-  background-size: 25px;
 }
 
 /* ********************************** ICON ********************************** */
@@ -436,6 +435,11 @@ input[type=text] {
 }
 .icon-alert {
   fill: red;
+}
+.icon-search {
+  position: absolute;
+  right: 25px;
+  top: 67px;
 }
 
 .js-hide-arrow-right,
@@ -574,13 +578,50 @@ input[type=text] {
 .employee-dir,
 .modal-close,
 #js-left-arrow,
-#js-right-arrow {
+#js-right-arrow,
+.switch-light {
   cursor: pointer;
 }
 
 /* ***************************** HORIZONTAL LINE **************************** */
 .hr-line {
   width: 70%;
+}
+
+/* ****************************** TOGGLE SWITCH ***************************** */
+.toggle-switch {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 20px;
+  color: #fff;
+  font-weight: bold;
+  font-size: 1.1em;
+}
+.toggle-switch > p {
+  align-self: center;
+  margin-right: 15px;
+  margin-top: 5px;
+}
+
+.switch-material.switch-light > span {
+  border: 1px solid #fff;
+}
+
+.switch-material.switch-light input:checked ~ span {
+  background: lightgreen;
+}
+.switch-material.switch-light input:checked ~ span input:checked ~ span a {
+  background: #fff;
+}
+
+.switch-material.switch-light input:checked ~ span a {
+  background: #fff;
+}
+
+.switch-light.switch-material > span:before,
+.switch-light.switch-material > span:after,
+.switch-toggle.switch-material label:after {
+  background: none;
 }
 
 /* ********************************* FOOTER ********************************* */
