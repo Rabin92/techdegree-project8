@@ -1,0 +1,35 @@
+/* ****************************** TOGGLE SWITCH ***************************** */
+.toggle-switch {
+  @include flexy($j-content: flex-end);
+  margin-top: 20px;
+  color: $white;
+  font-weight: bold;
+  font-size: 1.1em;
+  > p {
+    align-self: center;
+    margin-right: 15px;
+    margin-top: 5px;
+  }
+}
+
+// Switch
+.switch-material.switch-light > span {
+  border: 1px solid $white;
+}
+
+.switch-material.switch-light input:checked ~ span {
+  background: lightgreen;
+  & input:checked ~ span a {
+    background: $white;
+  }
+}
+
+.switch-material.switch-light input:checked ~ span a {
+  background: $white;
+}
+
+.switch-light.switch-material > span:before,
+.switch-light.switch-material > span:after,
+.switch-toggle.switch-material label:after {
+  background: none;
+}
