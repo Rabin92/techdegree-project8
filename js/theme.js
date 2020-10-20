@@ -12,6 +12,8 @@ const setBGColor = (element, color) => (element.style.backgroundColor = color);
 const setColor = (element, color) => (element.style.color = color);
 // SVG Fill
 const svgFill = (element, color) => (element.style.fill = color);
+// Border
+const border = (element, style) => (element.style.border = style);
 
 // Color
 const black = '#000';
@@ -32,7 +34,8 @@ const darkMode = () => {
   setColor(search, white);
   setColor(error, white);
   // Border Style
-  search.style.border = '1px solid white';
+  border(search, '1px solid white');
+
   // SVG Fill
   svgFill(leftArrow, white);
   svgFill(rightArrow, white);
@@ -46,7 +49,7 @@ const darkMode = () => {
     // Color
     setColor(employee, white);
     // Border Style
-    employee.style.border = '1px solid #fff';
+    border(employee, '1px solid white');
   });
 };
 
@@ -64,7 +67,9 @@ const lightMode = () => {
   setColor(search, '');
   setColor(error, '');
   // Border Style
-  search.style.border = '';
+  border(search, '');
+  border(search, '');
+
   // SVG Fill
   svgFill(leftArrow, '');
   svgFill(rightArrow, '');
