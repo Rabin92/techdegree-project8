@@ -471,6 +471,7 @@ input[type=text] {
   box-shadow: 1px 1px #888888;
   padding: 0.8em;
   overflow: hidden;
+  word-break: break-all;
 }
 @media (min-width: 43em) {
   .employee-dir {
