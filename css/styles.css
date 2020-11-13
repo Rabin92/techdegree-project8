@@ -376,7 +376,7 @@ button {
 
 body {
   position: relative;
-  font-family: "Heebo", sans-serif;
+  font: 300 1em/1.5 "Heebo", sans-serif;
   font-weight: 300;
   background: #f5f5f7;
 }
@@ -492,9 +492,6 @@ input[type=text] {
 }
 .employee-info > h2 {
   letter-spacing: 0.062em;
-}
-.employee-info > p:nth-of-type(n + 1) {
-  padding: 4px 0;
 }
 .employee-info-modal {
   margin-left: initial;
