@@ -425,6 +425,7 @@ input[type=text] {
   padding: 9px;
   border-radius: 5px;
   border: 1px solid grey;
+  height: 40px;
 }
 
 /* ********************************** ICON ********************************** */
@@ -438,8 +439,19 @@ input[type=text] {
 }
 .icon-search {
   position: absolute;
-  right: 25px;
-  top: 67px;
+  top: -40px;
+  height: 40px;
+  background: #656363;
+  width: 45px;
+  fill: #fff;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.search-icon {
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
 }
 
 .js-hide-arrow-right,
