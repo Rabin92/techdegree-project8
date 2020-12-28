@@ -1,8 +1,9 @@
 /* ********************************** INPUT ********************************* */
-input[type="text"] {
+input[type='text'] {
   letter-spacing: 0.15em;
   margin-top: 10px;
   padding: 9px;
   border-radius: 5px;
   border: 1px solid $input-brdr;
+  height: 40px;
 }

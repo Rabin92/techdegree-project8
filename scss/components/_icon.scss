@@ -9,9 +9,19 @@
   }
   &-search {
     position: absolute;
-    right: 25px;
-    top: 67px;
+    top: -40px;
+    height: 40px;
+    background: rgb(101, 99, 99);
+    width: 45px;
+    fill: $white;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
   }
+}
+
+.search-icon {
+  position: relative;
+  @include flexy($j-content: flex-end);
 }
 
 .js-hide-arrow-right,
