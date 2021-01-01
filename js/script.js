@@ -1,18 +1,18 @@
 // Search Field
-const search = document.querySelector("#js-search");
+const search = document.querySelector('#js-search');
 
 // Modal Arrows
-const leftArrow = document.querySelector("#js-left-arrow");
-const rightArrow = document.querySelector("#js-right-arrow");
+const leftArrow = document.querySelector('#js-left-arrow');
+const rightArrow = document.querySelector('#js-right-arrow');
 
 // Main Container
-const container = document.querySelector(".grid-container");
+const container = document.querySelector('.grid-container');
 
 // Overlay & Modal
-const overlay = document.querySelector(".overlay");
-const modalContent = document.querySelector(".modal-content");
-const modal = document.querySelector(".modal");
-const modalClose = document.querySelector("#js-modal-close");
+const overlay = document.querySelector('.overlay');
+const modalContent = document.querySelector('.modal-content');
+const modal = document.querySelector('.modal');
+const modalClose = document.querySelector('#js-modal-close');
 
 // Hold values received from API
 let employees = [];
@@ -76,7 +76,7 @@ const displayModal = index => {
         <p>D.O.B - ${date.getMonth()}/${date.getDate()}/${date.getFullYear()}</p>
     </div>
   `;
-  overlay.classList.remove("hidden");
+  overlay.classList.remove('hidden');
   modalContent.innerHTML = modalHTML;
 };
 
@@ -84,52 +84,52 @@ const displayModal = index => {
 const displayOverlay = e => {
   const theTarget = e.target;
   if (theTarget !== container) {
-    const card = theTarget.closest(".employee-dir");
-    const index = card.getAttribute("data-index");
+    const card = theTarget.closest('.employee-dir');
+    const index = card.getAttribute('data-index');
     displayModal(index);
 
     // Left and Right Arrows on Modal
     let counterIndex = index;
-    rightArrow.addEventListener("click", () => {
+    rightArrow.addEventListener('click', () => {
       if (counterIndex !== 11) {
         counterIndex++;
         displayModal(counterIndex);
       }
       if (counterIndex === 11) {
-        rightArrow.classList.add("js-hide-arrow-right");
+        rightArrow.classList.add('js-hide-arrow-right');
       } else if (counterIndex === 1) {
-        leftArrow.classList.remove("js-hide-arrow-left");
+        leftArrow.classList.remove('js-hide-arrow-left');
       }
     });
 
-    leftArrow.addEventListener("click", () => {
+    leftArrow.addEventListener('click', () => {
       if (counterIndex !== 0) {
         counterIndex--;
         displayModal(counterIndex);
       }
       if (counterIndex == 10) {
-        rightArrow.classList.remove("js-hide-arrow-right");
+        rightArrow.classList.remove('js-hide-arrow-right');
       } else if (counterIndex === 0) {
-        leftArrow.classList.add("js-hide-arrow-left");
+        leftArrow.classList.add('js-hide-arrow-left');
       }
     });
 
     // Add blur effect on the main content
-    container.style.filter = "blur(4px)";
+    container.style.filter = 'blur(4px)';
   }
 };
 
 // Function: Close Modal
 const closeModal = () => {
-  overlay.classList.add("hidden");
+  overlay.classList.add('hidden');
   // Remove blur effect
-  container.style.filter = "none";
+  container.style.filter = 'none';
 };
 
 // Function: Error message
 
 const errMsg = () => {
-  const error = document.querySelector(".error-msg");
+  const error = document.querySelector('.error-msg');
 
   const displayMsg = `
   <svg
@@ -151,19 +151,19 @@ const errMsg = () => {
 const searchEmployee = () => {
   const searchVal = search.value.toUpperCase();
   const displayEmployeesName = employees;
-  const employeeCard = document.querySelectorAll(".employee-dir");
+  const employeeCard = document.querySelectorAll('.employee-dir');
 
   displayEmployeesName.forEach((employee, i) => {
     const matchedNames = `
     ${
-      employee.name.first.toUpperCase() + " " + employee.name.last.toUpperCase()
+      employee.name.first.toUpperCase() + ' ' + employee.name.last.toUpperCase()
     } 
     `;
 
     if (matchedNames.includes(searchVal)) {
-      employeeCard[i].classList.remove("employee-card");
+      employeeCard[i].classList.remove('employee-card');
     } else {
-      employeeCard[i].classList.add("employee-card");
+      employeeCard[i].classList.add('employee-card');
     }
   });
 };
@@ -175,7 +175,15 @@ fetch(url)
   .then(displayEmployees)
   .catch(errMsg);
 
+// Date Object
+
+const date = new Date();
+const fullYear = date.getFullYear();
+
+const setYear = document.querySelector('.setYear');
+setYear.innerHTML = fullYear;
+
 // Event listener
-container.addEventListener("click", displayOverlay);
-modalClose.addEventListener("click", closeModal);
-search.addEventListener("keyup", searchEmployee);
+container.addEventListener('click', displayOverlay);
+modalClose.addEventListener('click', closeModal);
+search.addEventListener('keyup', searchEmployee);
