@@ -19,8 +19,8 @@
     <title>Employee Directory</title>
   </head>
   <body>
-    <div class="wrapper">
-      <header class="flex-container">
+    <header>
+      <div class="flex-container wrapper">
         <h2>Employee Directory</h2>
         <input type="text" placeholder="Search for employees" id="js-search" />
         <!-- Search icon -->
@@ -49,64 +49,63 @@
             </span>
           </label>
         </div>
-      </header>
-      <!-- header closed -->
-
-      <main class="grid-container">
-        <!-- Insert Employee Details from JS -->
-        <div class="error-msg"></div>
-      </main>
-      <!-- main closed -->
-
-      <div class="overlay hidden">
-        <div class="modal">
-          <button class="modal-close" id="js-modal-close">&#10005;</button>
-          ​<!-- modal information will be added with JS here -->
-          <div class="modal-content"></div>
-
-          <div class="icon-arrow">
-            <svg
-              id="js-left-arrow"
-              xmlns="http://www.w3.org/2000/svg"
-              height="30"
-              viewBox="0 0 512 512"
-            >
-              <path
-                d="M256,48C141.13,48,48,141.13,48,256s93.13,208,208,208,208-93.13,208-208S370.87,48,256,48Zm62.63,304L296,374.63,177.37,256,296,137.37,318.63,160l-96,96Z"
-              />
-            </svg>
-            <!-- left arrow -->
-
-            <svg
-              id="js-right-arrow"
-              xmlns="http://www.w3.org/2000/svg"
-              height="30"
-              viewBox="0 0 512 512"
-            >
-              <path
-                d="M256,48C141.13,48,48,141.13,48,256s93.13,208,208,208,208-93.13,208-208S370.87,48,256,48ZM216,374.63,193.37,352l96-96-96-96L216,137.37,334.63,256Z"
-              />
-            </svg>
-            <!-- right arrow -->
-          </div>
-          <!-- div: icon arrow closed -->
-        </div>
-        <!-- div: modal closed -->
       </div>
-      <!-- div: Overlay closed -->
+    </header>
+    <!-- header closed -->
 
-      <hr class="hr-line" />
-      <!-- HR line -->
-      <footer>
-        <p>
-          <strong
-            >Copyright &copy; <span class="setYear"></span>. All rights
-            reserved.</strong
+    <main class="grid-container wrapper">
+      <!-- Insert Employee Details from JS -->
+      <div class="error-msg"></div>
+    </main>
+    <!-- main closed -->
+
+    <div class="overlay hidden">
+      <div class="modal">
+        <button class="modal-close" id="js-modal-close">&#10005;</button>
+        ​<!-- modal information will be added with JS here -->
+        <div class="modal-content"></div>
+
+        <div class="icon-arrow">
+          <svg
+            id="js-left-arrow"
+            xmlns="http://www.w3.org/2000/svg"
+            height="30"
+            viewBox="0 0 512 512"
           >
-        </p>
-      </footer>
+            <path
+              d="M256,48C141.13,48,48,141.13,48,256s93.13,208,208,208,208-93.13,208-208S370.87,48,256,48Zm62.63,304L296,374.63,177.37,256,296,137.37,318.63,160l-96,96Z"
+            />
+          </svg>
+          <!-- left arrow -->
+
+          <svg
+            id="js-right-arrow"
+            xmlns="http://www.w3.org/2000/svg"
+            height="30"
+            viewBox="0 0 512 512"
+          >
+            <path
+              d="M256,48C141.13,48,48,141.13,48,256s93.13,208,208,208,208-93.13,208-208S370.87,48,256,48ZM216,374.63,193.37,352l96-96-96-96L216,137.37,334.63,256Z"
+            />
+          </svg>
+          <!-- right arrow -->
+        </div>
+        <!-- div: icon arrow closed -->
+      </div>
+      <!-- div: modal closed -->
     </div>
-    <!-- div: wrapper closed -->
+    <!-- div: Overlay closed -->
+
+    <hr class="hr-line" />
+    <!-- HR line -->
+    <footer>
+      <p>
+        <strong
+          >Copyright &copy; <span class="setYear"></span>. All rights
+          reserved.</strong
+        >
+      </p>
+    </footer>
 
     <!-- Script -->
     <script src="js/script.js"></script>
