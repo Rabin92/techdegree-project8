@@ -7,7 +7,6 @@ $input-brdr: grey;
 $modal-bck: #f2f2f2;
 $overlay-bck: rgba(146, 142, 142, 0.6);
 $body-bck: #f5f5f7;
-$wrapper-bck: #fbfbfd;
 
 // Overlay offsets
 $offset-position-val: 0;
@@ -16,6 +15,6 @@ $offset-position-val: 0;
 $cursor: pointer;
 
 // Media Queries
-$break-s: "(min-width: 43em)"; // 688px
-$break-m: "(min-width: 62em)"; // 992px
-$break-l: "(min-width: 82em)"; // 1312px
+$break-s: '(min-width: 43em)'; // 688px
+$break-m: '(min-width: 62em)'; // 992px
+$break-l: '(min-width: 82em)'; // 1312px
