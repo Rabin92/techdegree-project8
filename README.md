@@ -15,7 +15,7 @@
 
 ### Screenshot
 
-![](./images/screenshot.png)
+![](./image/screenshot.png)
 
 ### Links
 
